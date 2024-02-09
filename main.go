@@ -9,7 +9,7 @@ import (
 type Song struct {
 	Name   string `json:"name"`
 	Artist string `json:"artist"`
-	Album  string `json:"album"`
+	Genre  string `json:"genre"`
 }
 
 var songs []Song
