@@ -13,6 +13,7 @@ type Song struct {
 }
 
 var songs []Song
+var carnetNumber = "201700672"
 
 func main() {
 	// Configuración del router Gin
@@ -32,6 +33,9 @@ func main() {
 
 		// Responder con los detalles de la canción recién creada
 		c.JSON(http.StatusCreated, newSong)
+	})
+	router.GET("/carnet", func(c *gin.Context) {
+		c.String(http.StatusOK, "Número de carnet: %s", carnetNumber)
 	})
 
 	// Correr el servidor en el puerto 8080
